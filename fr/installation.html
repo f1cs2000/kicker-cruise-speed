@@ -2,74 +2,97 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Installation – Kicker Speed Control (KSC)</title>
+  <title>Installation – KSC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Instructions d'installation du Kicker Speed Control (KSC) pour moteurs hors-bord.">
-  <link rel="stylesheet" href="../assets/css/style.css">
+        content="Guide d'installation du Kicker Speed Control (KSC) pour moteurs hors-bord type kicker. Suivez les étapes pour une installation sécurisée et efficace.">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+    header, footer {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    .subtitle {
+      margin-top: 5px;
+      color: #555;
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    hr {
+      margin: 40px 0;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <h1>Installation</h1>
-  <p class="subtitle">
-    Kicker Speed Control (KSC)
-  </p>
+  <p class="subtitle">Guide d'installation du Kicker Speed Control (KSC)</p>
+
   <nav>
-    <p><a href="../index.html">← Retour à l’accueil</a></p>
+    <strong>Français</strong> |
+    <a href="../en/installation.html">English</a>
   </nav>
 </header>
 
 <main>
 
 <section>
-  <h2>Présentation</h2>
-  <p>
-    Cette page explique comment installer le <strong>Kicker Speed Control (KSC)</strong>
-    sur votre moteur hors-bord de type <em>kicker</em> en toute sécurité.
-  </p>
-  <p>
-    Suivez ces instructions pas à pas pour un montage sûr et efficace.
-  </p>
-</section>
-
-<hr>
-
-<section>
-  <h2>Contenu du kit</h2>
+  <h2>Préparation</h2>
   <ul>
-    <li>KSC : écran, encodeur rotatif, ESP32, régulateur 12→5V</li>
-    <li>Servo moteur pour contrôler le ralenti</li>
-    <li>Kit d’installation mécanique (compatible selon modèle de moteur)</li>
-    <li>Câbles et connecteurs</li>
-    <li>Guide de montage et sécurité</li>
+    <li>Coupez l’alimentation du moteur avant toute manipulation.</li>
+    <li>Vérifiez que tous les composants du KSC sont présents : écran, encodeur, ESP32, régulateur de tension, servo, câblage et kit d’installation.</li>
+    <li>Assurez-vous d’avoir les outils nécessaires pour fixer le servo dans le compartiment moteur.</li>
   </ul>
 </section>
 
 <hr>
 
 <section>
-  <h2>Instructions d’installation</h2>
-  <ol>
-    <li>Éteignez le moteur et débranchez la batterie pour éviter tout accident.</li>
-    <li>Installez le servo moteur dans le compartiment moteur selon le modèle de votre moteur et le kit fourni.</li>
-    <li>Fixez le KSC et connectez-le au servo via le câblage fourni.</li>
-    <li>Connectez l’alimentation 12–14V au régulateur intégré du KSC.</li>
-    <li>Vérifiez que tous les câbles sont correctement attachés et sécurisés.</li>
-    <li>Testez le système à basse vitesse dans un environnement contrôlé avant toute sortie.</li>
-    <li>Assurez-vous que le KSC n’entrave en rien le fonctionnement normal du moteur.</li>
-  </ol>
+  <h2>Installation du servo moteur</h2>
+  <ul>
+    <li>Installez le servo sur le moteur hors-bord à l’aide du kit d’installation adapté à votre modèle.</li>
+    <li>Assurez-vous que le servo est solidement fixé et que son bras peut se déplacer librement sans obstacle.</li>
+    <li>Vérifiez la connexion mécanique entre le servo et la commande de ralenti.</li>
+  </ul>
 </section>
 
 <hr>
 
 <section>
-  <h2>Recommandations supplémentaires</h2>
+  <h2>Branchement électronique</h2>
   <ul>
-    <li>Ne laissez jamais le KSC ou le servo sans surveillance lors de la mise en marche du moteur.</li>
-    <li>Vérifiez régulièrement l’état des câbles et des fixations.</li>
-    <li>Consultez la page <a href="securite.html">Sécurité & Responsabilité</a> avant toute utilisation.</li>
+    <li>Connectez le régulateur de tension au circuit 12–14 V du bateau.</li>
+    <li>Branchez l’ESP32 et l’écran selon le schéma fourni.</li>
+    <li>Reliez le servo au KSC en respectant la polarité et les connexions indiquées.</li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>Test initial</h2>
+  <ul>
+    <li>Avant de remettre le moteur en marche, vérifiez que tous les câbles sont sécurisés.</li>
+    <li>Allumez le KSC et observez le fonctionnement du servo.</li>
+    <li>Faites des ajustements progressifs du ralenti pour confirmer que tout fonctionne correctement.</li>
   </ul>
 </section>
 
