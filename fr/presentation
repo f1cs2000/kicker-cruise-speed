@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>KSC – Kicker Speed Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kicker Speed Control (KSC) – Contrôle précis du ralenti pour moteurs kicker. Ajustez la vitesse de votre moteur simplement et efficacement.">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+    header, footer {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    .subtitle {
+      margin-top: 5px;
+      color: #555;
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    hr {
+      margin: 40px 0;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Kicker Speed Control</h1>
+  <p class="subtitle">
+    Contrôle précis du ralenti pour moteurs kicker
+  </p>
+
+  <nav>
+    <strong>Français</strong> |
+    <a href="../en/index.html">English</a>
+  </nav>
+</header>
+
+<main>
+
+<section>
+  <h2>Caractéristiques principales</h2>
+  <ul>
+    <li>Grande précision dans le contrôle de l’angle du servo (vitesse du Kicker)</li>
+    <li>Contrôle du sens de rotation du servo (horaire ou antihoraire)</li>
+    <li>Si l’application redémarre, reprend la dernière position</li>
+    <li>Mémorisation de l’angle maximum configuré</li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>Application (Android/App)</h2>
+
+  <h3>Boutons de contrôle</h3>
+  <ul>
+    <li>Augmenter l’angle de 0,5°</li>
+    <li>Augmenter l’angle de 5°</li>
+    <li>Diminuer l’angle de 0,5°</li>
+    <li>Diminuer l’angle de 5°</li>
+    <li><strong>IDLE</strong> – Revenir au ralenti</li>
+    <li><strong>MAX SPEED</strong> – Pleine puissance (doit être maintenu)</li>
+  </ul>
+
+  <h3>Bouton GoByte</h3>
+  <ul>
+    <li>Donne une poussée ou réduit la vitesse pendant 10 secondes</li>
+    <li>Cycles configurables :
+      <ul>
+        <li>Toutes les 2 minutes</li>
+        <li>Toutes les 4 minutes</li>
+        <li>Toutes les 6 minutes</li>
+        <li>Poussée ou réduction plus forte toutes les 4 minutes</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Bouton SETUP</h3>
+  <ul>
+    <li>Définir le sens de rotation du servo (une seule fois lors de l’installation)</li>
+    <li>Définir l’angle maximum souhaité (réglable entre 30 et 100°)</li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>Boîte KSC</h2>
+  <ul>
+    <li>Boîtier avec écran et encodeur rotatif à poussoir (étanche, résistant aux éclaboussures)</li>
+  </ul>
+
+  <h3>À l’allumage, l’écran affiche :</h3>
+  <ul>
+    <li>Numéro de série</li>
+    <li>Adresse MAC Bluetooth</li>
+    <li>Version du programme</li>
+  </ul>
+
+  <h3>En fonctionnement, l’écran affiche :</h3>
+  <ul>
+    <li>L’angle du servo (identique à l’application)</li>
+    <li>Mode GoByte sélectionné (si actif)
+      <ul>
+        <li>Nombre de secondes avant la prochaine poussée</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Fonctions du bouton de l’encodeur :</h3>
+  <ul>
+    <li>Tourner le bouton pour ajuster l’angle du servo (mise à jour automatique dans l’application)</li>
+    <li>Pousser le bouton pour revenir au ralenti</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <hr>
+  <p>
+    © Kicker Speed Control – Tous droits réservés
+  </p>
+</footer>
+
+</body>
+</html>
