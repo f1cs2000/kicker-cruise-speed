@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KSC – Kicker Speed Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kicker Speed Control (KSC) – Precise control of idle speed for kicker motors. Easily and efficiently adjust your motor speed.">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+    header, footer {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    .subtitle {
+      margin-top: 5px;
+      color: #555;
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    hr {
+      margin: 40px 0;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Kicker Speed Control</h1>
+  <p class="subtitle">
+    Precise idle control for kicker motors
+  </p>
+
+  <nav>
+    <a href="../fr/index.html">Français</a> |
+    <strong>English</strong>
+  </nav>
+</header>
+
+<main>
+
+<section>
+  <h2>Key Features</h2>
+  <ul>
+    <li>High precision control of the servo angle (kicker speed)</li>
+    <li>Servo direction control (Clockwise or Counter-Clockwise)</li>
+    <li>If the application is restarted, it resumes from the last position</li>
+    <li>Stores the configured Max Angle in memory</li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>Application (Android/App)</h2>
+
+  <h3>Control Buttons</h3>
+  <ul>
+    <li>Increase angle by 0.5 degree</li>
+    <li>Increase angle by 5 degrees</li>
+    <li>Decrease angle by 0.5 degree</li>
+    <li>Decrease angle by 5 degrees</li>
+    <li><strong>IDLE</strong> – Return to idle speed</li>
+    <li><strong>MAX SPEED</strong> – Full throttle (must be held)</li>
+  </ul>
+
+  <h3>GoByte Button</h3>
+  <ul>
+    <li>Provides a temporary speed increase or decrease for 10 seconds</li>
+    <li>Configurable cycles:
+      <ul>
+        <li>Every 2 minutes</li>
+        <li>Every 4 minutes</li>
+        <li>Every 6 minutes</li>
+        <li>Stronger speed increase or decrease every 4 minutes</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>SETUP Button</h3>
+  <ul>
+    <li>Set the servo rotation direction (performed once during installation)</li>
+    <li>Set the desired Max Angle (adjustable between 30 and 100 degrees)</li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>KSC Control Box</h2>
+  <ul>
+    <li>Enclosed unit with display and rotary push encoder (water-resistant, splash-proof)</li>
+  </ul>
+
+  <h3>At Startup, the Display Shows:</h3>
+  <ul>
+    <li>Serial number</li>
+    <li>Bluetooth MAC address</li>
+    <li>Firmware version</li>
+  </ul>
+
+  <h3>During Operation, the Display Shows:</h3>
+  <ul>
+    <li>Servo angle (same value as shown in the application)</li>
+    <li>Selected GoByte mode (when active)
+      <ul>
+        <li>Remaining seconds before the next speed pulse</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Encoder Button Functions:</h3>
+  <ul>
+    <li>Rotate the knob to adjust the servo angle (automatically updates the angle in the application)</li>
+    <li>Press the knob to return to idle speed</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <hr>
+  <p>
+    © Kicker Speed Control – All rights reserved
+  </p>
+</footer>
+
+</body>
+</html>
