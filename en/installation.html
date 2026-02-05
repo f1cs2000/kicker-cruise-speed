@@ -5,7 +5,7 @@
   <title>Installation – KSC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Installation guide for the Kicker Speed Control (KSC) for kicker outboard motors. Follow the steps for a safe and effective setup.">
+        content="Detailed installation guide for the Kicker Speed Control (KSC). Follow these steps for a safe and proper installation.">
 
   <style>
     body {
@@ -55,45 +55,140 @@
 <main>
 
 <section>
-  <h2>Preparation</h2>
+  <h2>What You Need to Provide</h2>
   <ul>
-    <li>Disconnect the motor’s power before any handling.</li>
-    <li>Check that all KSC components are present: display, encoder, ESP32, voltage regulator, servo, wiring, and installation kit.</li>
-    <li>Ensure you have the necessary tools to mount the servo in the engine compartment.</li>
+    <li><strong>Tools:</strong> Screwdriver, Allen key, wire cutter, wire stripper</li>
+    <li><strong>Hardware:</strong> Wire, wire terminals, zip ties, electrical tape</li>
   </ul>
 </section>
 
 <hr>
 
 <section>
-  <h2>Servo Motor Installation</h2>
+  <h2>1. Installation of the KSC Box</h2>
   <ul>
-    <li>Mount the servo on the outboard motor using the installation kit for your specific model.</li>
-    <li>Ensure the servo is securely fixed and its arm can move freely without obstacles.</li>
-    <li>Check the mechanical connection between the servo and the idle control lever.</li>
+    <li>Choose a suitable location to install the KSC Box mounting stand.</li>
+    <li>Remove the protective tape from the stand and securely mount it.</li>
+    <li>Insert the KSC Box into the stand.</li>
+    <li>Use one of the two <strong>#6 cables</strong> provided in the kit (both are identical).</li>
+    <li>Connect the <strong>red wire</strong> to <strong>12V positive</strong>, preferably powered when the boat dash master switch is ON.</li>
+    <li>Connect the <strong>green wire</strong> to <strong>12V negative (ground)</strong>.</li>
+    <li>Run the <strong>white wire</strong> to the white wire of the servo motor on the kicker (this wire must be provided by the installer).</li>
+    <li>
+      <strong>WARNING:</strong> If the servo and the KSC Box are powered by different batteries,
+      both batteries must share a common ground.
+    </li>
+    <li>
+      After connecting power, connect the #6 cable to the <strong>#5 cable</strong> provided in the kit,
+      plug the USB-C into the KSC Box, and verify that it powers ON.
+      Disconnect the USB-C after the test.
+    </li>
   </ul>
 </section>
 
 <hr>
 
 <section>
-  <h2>Electronics Connection</h2>
+  <h2>2. Installation of the Servo on the Kicker</h2>
   <ul>
-    <li>Connect the voltage regulator to the boat’s 12–14 V circuit.</li>
-    <li>Connect the ESP32 and display according to the provided wiring diagram.</li>
-    <li>Connect the servo to the KSC, respecting the correct polarity and wiring.</li>
+    <li>
+      Mounting the servo is often the most challenging part of the installation.
+    </li>
+    <li>
+      Servo installation kits are available online based on your kicker’s make, model, and year.
+      The supplied brackets may not always fit perfectly, but parts of these kits are often useful.
+    </li>
+    <li>
+      Based on our experience, in more than 50% of installations the servo can be mounted
+      directly to a metal bracket on the kicker motor aligned with the carburetor,
+      secured using heavy-duty zip ties.
+      (Pictures will be provided later.)
+    </li>
+    <li>Connect the second <strong>#6 cable</strong> provided in the kit.</li>
+    <li>
+      Connect the <strong>red wire</strong> to a constant <strong>12V positive</strong> source
+      (commonly the starter solenoid terminal).
+      The servo draws no current, or extremely low current, when not actuated.
+    </li>
+    <li>Connect the <strong>green wire</strong> to a solid ground on the kicker motor.</li>
+    <li>Connect the <strong>white wire</strong> to the white wire coming from the KSC Box.</li>
+    <li>Plug the connector into the servo motor.</li>
   </ul>
 </section>
 
 <hr>
 
 <section>
-  <h2>Initial Test</h2>
+  <h2>3. Testing the KSC Box and Servo</h2>
   <ul>
-    <li>Before starting the motor, ensure all cables are secured.</li>
-    <li>Power on the KSC and observe the servo operation.</li>
-    <li>Make gradual idle adjustments to confirm everything is working correctly.</li>
+    <li>Connect the USB-C cable to the KSC Box.</li>
+    <li>Connect the Android App to the KSC Box.</li>
+    <li>Press the <strong>MAX SPEED</strong> button and verify that the servo moves in the correct direction.</li>
+    <li>
+      If the direction is incorrect, go to <strong>SETUP</strong> in the app and press
+      <strong>Switch Rotation (CW / CCW)</strong>.
+      The KSC Box will restart and the app must be reconnected.
+    </li>
+    <li>
+      <strong>IMPORTANT:</strong> Never switch rotation when the servo actuator is connected
+      to the carburetor. This step is only for initial installation and is saved in the KSC Box.
+    </li>
   </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>4. Linking the Servo Actuator to the Carburetor</h2>
+  <ul>
+    <li>Use parts from the installation kit specific to your kicker model if available.</li>
+    <li>
+      The special <strong>#7 linkage</strong> included in the KSC kit can be used in many cases.
+      It may require cutting to length and reshaping.
+    </li>
+    <li>
+      Always use the actuator hole closest to the servo shaft for the finest throttle adjustment.
+      Trim excess length if using the nylon actuator.
+    </li>
+    <li>
+      Ensure the servo is set to <strong>0 degrees</strong> and the kicker throttle is fully closed
+      before linking the actuator.
+    </li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>5. Final Test with Engine Running</h2>
+  <ul>
+    <li>Start the kicker motor and be ready to shut it down immediately if needed.</li>
+    <li>
+      With the engine idling, rotate the encoder knob on the KSC Box.
+      The RPM should increase or decrease accordingly.
+    </li>
+    <li>
+      If the servo does not reach high idle or has too much travel:
+      <ul>
+        <li>Set the KSC Box to <strong>Speed 0</strong>.</li>
+        <li>Open <strong>SETUP</strong> in the app.</li>
+        <li>Select <strong>Max Angle</strong> and adjust as required.</li>
+        <li>Test again using the <strong>MAX SPEED</strong> button.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>Enjoy Your KSC</h2>
+  <p>
+    Your KSC system is now ready to use.
+    Don’t forget to watch the <strong>KSC Live Testing</strong> video and consult the
+    <strong>KSC App Manual</strong>.
+    <br><strong>Good fishing!</strong>
+  </p>
 </section>
 
 <hr>
@@ -103,7 +198,6 @@
     <a href="index.html" style="text-decoration:none; font-weight:bold;">⬅ Back to Home</a>
   </p>
 </section>
-  
 
 </main>
 
