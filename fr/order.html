@@ -1,27 +1,88 @@
-<section>
-  <h2>Commande KSC</h2>
-  <p>Remplissez le formulaire ci-dessous pour commander votre Kicker Speed Control. Après envoi, suivez les instructions pour un e‑transfert.</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Commander KSC – Kicker Speed Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <form action="mailto:contact@kickerspeedcontrol.ca" method="post" enctype="text/plain">
-    <label for="name">Nom complet :</label><br>
-    <input type="text" id="name" name="Nom" required><br><br>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    p.note {
+      font-size: 0.95em;
+      color: #333;
+      margin-top: 10px;
+    }
+  </style>
+</head>
 
-    <label for="email">Adresse e-mail :</label><br>
-    <input type="email" id="email" name="Email" required><br><br>
+<body>
 
-    <label for="address">Adresse de livraison :</label><br>
-    <textarea id="address" name="Adresse" rows="3" required></textarea><br><br>
+<h1>Commander Kicker Speed Control (KSC)</h1>
 
-    <label for="quantity">Quantité :</label><br>
-    <input type="number" id="quantity" name="Quantité" value="1" min="1" required><br><br>
+<p>
+Prix spécial pour les premières commandes : <strong>285 $ CAD par unité</strong> (livraison incluse au Canada, Xpresspost).
+</p>
 
-    <label for="notes">Notes / Commentaires :</label><br>
-    <textarea id="notes" name="Notes" rows="3"></textarea><br><br>
+<p class="note">
+Veuillez remplir le formulaire ci-dessous. Après l’envoi, vous serez redirigé vers une page de confirmation avec les instructions pour le paiement via Interac e-Transfer.
+</p>
 
-    <input type="submit" value="Envoyer la commande">
-  </form>
+<form action="https://formspree.io/f/xzdapjkb" method="POST">
 
-  <p>
-    Après avoir envoyé le formulaire, veuillez <a href="assets/manuals/Instructions_Etransfer.pdf" target="_blank">cliquer ici pour consulter les instructions pour l’e‑transfert</a>.
-  </p>
-</section>
+  <label for="name">Nom complet</label>
+  <input type="text" name="name" id="name" required>
+
+  <label for="email">Adresse email</label>
+  <input type="email" name="email" id="email" required>
+
+  <label for="address">Adresse de livraison</label>
+  <textarea name="address" id="address" rows="4" required></textarea>
+
+  <label for="country">Pays</label>
+  <input type="text" name="country" id="country" value="Canada" required>
+
+  <label for="quantity">Quantité</label>
+  <select name="quantity" id="quantity">
+    <option value="1">1 unité</option>
+    <option value="2">2 unités</option>
+    <option value="3">3 unités</option>
+  </select>
+
+  <label for="message">Notes supplémentaires (facultatif)</label>
+  <textarea name="message" id="message" rows="4"></textarea>
+
+  <input type="hidden" name="_subject" value="Nouvelle commande KSC">
+  <input type="hidden" name="_redirect" value="https://f1cs2000.github.io/kicker-Speed-Control/fr/thank-you.html">
+
+  <button type="submit">Envoyer la commande</button>
+
+</form>
+
+</body>
+</html>
