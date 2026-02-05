@@ -33,6 +33,11 @@
       font-size: 16px;
       cursor: pointer;
     }
+    p.note {
+      font-size: 0.95em;
+      color: #333;
+      margin-top: 10px;
+    }
   </style>
 </head>
 
@@ -41,9 +46,11 @@
 <h1>Order Kicker Speed Control (KSC)</h1>
 
 <p>
-Please complete the form below to place your order.
-After submission, you will receive an email with payment instructions
-(Interac e-Transfer).
+Special introductory price: <strong>$285 CAD per unit</strong> (shipping included within Canada, Xpresspost).
+</p>
+
+<p class="note">
+Please fill out the form below. After submission, you will be redirected to a confirmation page with instructions for payment via Interac e-Transfer.
 </p>
 
 <form action="https://formspree.io/f/xzdapjkb" method="POST">
@@ -58,7 +65,7 @@ After submission, you will receive an email with payment instructions
   <textarea name="address" id="address" rows="4" required></textarea>
 
   <label for="country">Country</label>
-  <input type="text" name="country" id="country" required>
+  <input type="text" name="country" id="country" value="Canada" required>
 
   <label for="quantity">Quantity</label>
   <select name="quantity" id="quantity">
@@ -70,10 +77,7 @@ After submission, you will receive an email with payment instructions
   <label for="message">Additional Notes (optional)</label>
   <textarea name="message" id="message" rows="4"></textarea>
 
-  <!-- Optional: subject line in your email -->
   <input type="hidden" name="_subject" value="New KSC Order">
-
-  <!-- Optional: redirect after submit -->
   <input type="hidden" name="_redirect" value="https://f1cs2000.github.io/kicker-Speed-Control/en/thank-you.html">
 
   <button type="submit">Submit Order</button>
