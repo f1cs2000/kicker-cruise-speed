@@ -1,27 +1,84 @@
-<section>
-  <h2>Order KSC</h2>
-  <p>Fill out the form below to order your Kicker Speed Control. After submitting, follow the instructions to make an e-transfer.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order KSC – Kicker Speed Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <form action="mailto:contact@kickerspeedcontrol.ca" method="post" enctype="text/plain">
-    <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="Name" required><br><br>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
 
-    <label for="email">Email Address:</label><br>
-    <input type="email" id="email" name="Email" required><br><br>
+<body>
 
-    <label for="address">Shipping Address:</label><br>
-    <textarea id="address" name="Address" rows="3" required></textarea><br><br>
+<h1>Order Kicker Speed Control (KSC)</h1>
 
-    <label for="quantity">Quantity:</label><br>
-    <input type="number" id="quantity" name="Quantity" value="1" min="1" required><br><br>
+<p>
+Please complete the form below to place your order.
+After submission, you will receive an email with payment instructions
+(Interac e-Transfer).
+</p>
 
-    <label for="notes">Notes / Comments:</label><br>
-    <textarea id="notes" name="Notes" rows="3"></textarea><br><br>
+<form action="https://formspree.io/f/xzdapjkb" method="POST">
 
-    <input type="submit" value="Submit Order">
-  </form>
+  <label for="name">Full Name</label>
+  <input type="text" name="name" id="name" required>
 
-  <p>
-    After submitting the form, please <a href="assets/manuals/Instructions_Etransfer.pdf" target="_blank">click here for e-transfer instructions</a>.
-  </p>
-</section>
+  <label for="email">Email Address</label>
+  <input type="email" name="email" id="email" required>
+
+  <label for="address">Shipping Address</label>
+  <textarea name="address" id="address" rows="4" required></textarea>
+
+  <label for="country">Country</label>
+  <input type="text" name="country" id="country" required>
+
+  <label for="quantity">Quantity</label>
+  <select name="quantity" id="quantity">
+    <option value="1">1 unit</option>
+    <option value="2">2 units</option>
+    <option value="3">3 units</option>
+  </select>
+
+  <label for="message">Additional Notes (optional)</label>
+  <textarea name="message" id="message" rows="4"></textarea>
+
+  <!-- Optional: subject line in your email -->
+  <input type="hidden" name="_subject" value="New KSC Order">
+
+  <!-- Optional: redirect after submit -->
+  <input type="hidden" name="_redirect" value="https://f1cs2000.github.io/kicker-Speed-Control/en/thank-you.html">
+
+  <button type="submit">Submit Order</button>
+
+</form>
+
+</body>
+</html>
