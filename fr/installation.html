@@ -5,7 +5,7 @@
   <title>Installation – KSC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Guide d'installation du Kicker Speed Control (KSC) pour moteurs hors-bord type kicker. Suivez les étapes pour une installation sécurisée et efficace.">
+        content="Guide d’installation détaillé du Kicker Speed Control (KSC). Suivez ces étapes pour une installation sécuritaire et efficace.">
 
   <style>
     body {
@@ -44,66 +44,166 @@
 
 <header>
   <h1>Installation</h1>
-  <p class="subtitle">Guide d'installation du Kicker Speed Control (KSC)</p>
+  <p class="subtitle">Guide d’installation du Kicker Speed Control (KSC)</p>
 
   <nav>
     <strong>Français</strong> |
-    <a href="../en/installation.html">English</a>
+    <a href="en/installation.html">English</a>
   </nav>
 </header>
 
 <main>
 
 <section>
-  <h2>Préparation</h2>
+  <h2>Matériel requis</h2>
   <ul>
-    <li>Coupez l’alimentation du moteur avant toute manipulation.</li>
-    <li>Vérifiez que tous les composants du KSC sont présents : écran, encodeur, ESP32, régulateur de tension, servo, câblage et kit d’installation.</li>
-    <li>Assurez-vous d’avoir les outils nécessaires pour fixer le servo dans le compartiment moteur.</li>
+    <li><strong>Outils :</strong> Tournevis, clé Allen, pince coupante, pince à dénuder</li>
+    <li><strong>Quincaillerie :</strong> Fil électrique, cosses, attaches (tie-wrap), ruban électrique</li>
   </ul>
 </section>
 
 <hr>
 
 <section>
-  <h2>Installation du servo moteur</h2>
+  <h2>1. Installation du boîtier KSC</h2>
   <ul>
-    <li>Installez le servo sur le moteur hors-bord à l’aide du kit d’installation adapté à votre modèle.</li>
-    <li>Assurez-vous que le servo est solidement fixé et que son bras peut se déplacer librement sans obstacle.</li>
-    <li>Vérifiez la connexion mécanique entre le servo et la commande de ralenti.</li>
+    <li>Choisir un emplacement approprié pour installer le support du boîtier KSC.</li>
+    <li>Retirer la pellicule protectrice du support et le fixer solidement.</li>
+    <li>Insérer le boîtier KSC dans son support.</li>
+    <li>Utiliser l’un des deux <strong>câbles #6</strong> fournis dans le kit (ils sont identiques).</li>
+    <li>
+      Connecter le <strong>fil rouge</strong> au <strong>12 V positif</strong>, idéalement alimenté lorsque
+      l’interrupteur principal du tableau de bord est en position ON.
+    </li>
+    <li>Connecter le <strong>fil vert</strong> au <strong>12 V négatif (masse)</strong>.</li>
+    <li>
+      Faire passer le <strong>fil blanc</strong> jusqu’au fil blanc du servo moteur du kicker.
+      (Ce fil doit être fourni par l’installateur.)
+    </li>
+    <li>
+      <strong>AVERTISSEMENT :</strong> Si le servo et le boîtier KSC ne sont pas alimentés par la même batterie,
+      les deux batteries doivent partager une masse commune.
+    </li>
+    <li>
+      Une fois l’alimentation branchée, connecter le câble #6 au <strong>câble #5</strong> fourni dans le kit,
+      puis brancher le USB-C au boîtier KSC afin de vérifier qu’il s’allume correctement.
+      Débrancher ensuite le USB-C après le test.
+    </li>
   </ul>
 </section>
 
 <hr>
 
 <section>
-  <h2>Branchement électronique</h2>
+  <h2>2. Installation du servo sur le kicker</h2>
   <ul>
-    <li>Connectez le régulateur de tension au circuit 12–14 V du bateau.</li>
-    <li>Branchez l’ESP32 et l’écran selon le schéma fourni.</li>
-    <li>Reliez le servo au KSC en respectant la polarité et les connexions indiquées.</li>
+    <li>L’installation du servo est souvent l’étape la plus délicate.</li>
+    <li>
+      Des kits d’installation sont disponibles en ligne selon la marque, le modèle et l’année du kicker.
+      Les supports fournis ne s’ajustent pas toujours parfaitement, mais certaines pièces sont souvent utiles.
+    </li>
+    <li>
+      Selon notre expérience, dans plus de 50 % des installations, le servo peut être fixé directement
+      sur un support métallique du moteur du kicker, aligné avec le carburateur,
+      à l’aide d’attaches robustes (tie-wrap).
+      (Des photos seront ajoutées ultérieurement.)
+    </li>
+    <li>Connecter le second <strong>câble #6</strong> fourni dans le kit.</li>
+    <li>
+      Connecter le <strong>fil rouge</strong> à une source <strong>12 V positif permanente</strong>
+      (généralement la borne du solénoïde de démarrage).
+      Le servo ne consomme aucun courant, ou très peu, lorsqu’il n’est pas actionné.
+    </li>
+    <li>Connecter le <strong>fil vert</strong> à une masse solide du moteur du kicker.</li>
+    <li>Connecter le <strong>fil blanc</strong> au fil blanc provenant du boîtier KSC.</li>
+    <li>Brancher le connecteur au servo moteur.</li>
   </ul>
 </section>
 
 <hr>
 
 <section>
-  <h2>Test initial</h2>
+  <h2>3. Test du boîtier KSC et du servo</h2>
   <ul>
-    <li>Avant de remettre le moteur en marche, vérifiez que tous les câbles sont sécurisés.</li>
-    <li>Allumez le KSC et observez le fonctionnement du servo.</li>
-    <li>Faites des ajustements progressifs du ralenti pour confirmer que tout fonctionne correctement.</li>
+    <li>Brancher le câble USB-C au boîtier KSC.</li>
+    <li>Connecter l’application Android au boîtier KSC.</li>
+    <li>Appuyer sur le bouton <strong>VITESSE MAX</strong> et vérifier que le servo se déplace dans la bonne direction.</li>
+    <li>
+      Si la direction est incorrecte, aller dans le menu <strong>SETUP</strong> de l’application et appuyer sur
+      <strong>Changer le sens de rotation (CW / CCW)</strong>.
+      Le boîtier KSC redémarrera et l’application devra être reconnectée.
+    </li>
+    <li>
+      <strong>IMPORTANT :</strong> Ne jamais changer le sens de rotation lorsque le servo est relié
+      au carburateur. Cette étape doit être effectuée uniquement lors de l’installation initiale
+      et elle est sauvegardée dans le boîtier KSC.
+    </li>
   </ul>
 </section>
 
-  <hr>
+<hr>
 
 <section>
+  <h2>4. Liaison du servo au carburateur</h2>
+  <ul>
+    <li>Utiliser, si possible, les pièces du kit d’installation spécifique à votre modèle de kicker.</li>
+    <li>
+      La <strong>liaison spéciale #7</strong> fournie dans le kit KSC peut être utilisée dans plusieurs cas.
+      Elle peut nécessiter d’être coupée à la bonne longueur et remodelée.
+    </li>
+    <li>
+      Toujours utiliser le trou de l’actionneur le plus près de l’axe du servo afin d’obtenir
+      un réglage de vitesse plus précis.
+      Si vous utilisez l’actionneur en nylon fourni, coupez l’excédent.
+    </li>
+    <li>
+      Lors de la liaison, assurez-vous que le servo est réglé à <strong>0 degré</strong>
+      et que le papillon du kicker est complètement fermé.
+    </li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>5. Test final avec le moteur en marche</h2>
+  <ul>
+    <li>Démarrer le moteur du kicker et être prêt à l’arrêter immédiatement en cas de problème.</li>
+    <li>
+      Lorsque le moteur tourne au ralenti, tourner le bouton encodeur du boîtier KSC.
+      Le régime moteur (RPM) doit augmenter ou diminuer en conséquence.
+    </li>
+    <li>
+      Si le servo n’atteint pas le régime élevé ou a trop de débattement :
+      <ul>
+        <li>Régler le boîtier KSC à <strong>Vitesse 0</strong>.</li>
+        <li>Aller dans le menu <strong>SETUP</strong> de l’application.</li>
+        <li>Sélectionner <strong>Max Angle</strong> et ajuster selon vos besoins.</li>
+        <li>Tester de nouveau avec le bouton <strong>VITESSE MAX</strong>.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>Profitez de votre KSC</h2>
   <p>
-    <a href="../index.html" style="text-decoration:none; font-weight:bold;">⬅ Retour à l’accueil</a>
+    Votre système KSC est maintenant prêt à être utilisé.
+    N’oubliez pas de visionner la vidéo <strong>KSC Live Testing</strong>
+    et de consulter le <strong>manuel de l’application KSC</strong>.
+    <br><strong>Bonne pêche !</strong>
   </p>
 </section>
 
+<hr>
+
+<section>
+  <p>
+    <a href="index.html" style="text-decoration:none; font-weight:bold;">⬅ Retour à l’accueil</a>
+  </p>
+</section>
 
 </main>
 
